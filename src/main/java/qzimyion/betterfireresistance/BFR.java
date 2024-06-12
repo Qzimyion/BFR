@@ -13,6 +13,6 @@ public class BFR implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Loading mod");
+
 	}
 }
