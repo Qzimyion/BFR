@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "bfr",
+	"version": "1.0",
+	"name": "BFR",
+	"description": "Removes the fire overlay when you have the fire resistance effect on.",
+	"authors": [
+		"Qzimyion"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/bfr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"qzimyion.betterfireresistance.BFR"
+		],
+		"client": [
+			"qzimyion.betterfireresistance.BFRClient"
+		],
+		"fabric-datagen": [
+			"qzimyion.betterfireresistance.BFRDataGenerator"
+		]
+	},
+	"mixins": [
+		"bfr.mixins.json",
+		{
+			"config": "bfr.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
