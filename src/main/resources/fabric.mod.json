@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "bfr",
-	"version": "1.0",
+	"version": "1.1",
 	"name": "BFR",
 	"description": "Removes the fire overlay when you have the fire resistance effect on.",
 	"authors": [
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/bfr/icon.png",
+	"icon": "assets/bfr/logo.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
