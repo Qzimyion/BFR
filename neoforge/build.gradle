@@ -10,6 +10,11 @@ def at = file('src/main/resources/META-INF/accesstransformer.cfg')
 if (at.exists()) {
     minecraft.accessTransformers.file at
 }
+repositories {
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
+}
 runs {
     configureEach {
         modSource project.sourceSets.main
@@ -35,6 +40,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
+    implementation "maven.modrinth:midnightlib:1.5.5-neoforge"
     implementation(jarJar("io.github.llamalad7:mixinextras-neoforge:0.3.6")) {
         jarJar.ranged(it, "[0.3.6,)")
     }

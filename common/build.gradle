@@ -11,10 +11,14 @@ minecraft {
         accessWideners(aw)
     }
 }
+repositories {
+    maven { url "https://api.modrinth.com/maven" }
+}
 
 dependencies {
     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "maven.modrinth:midnightlib:${midnightlib_version}-fabric"
 }
 
 configurations {

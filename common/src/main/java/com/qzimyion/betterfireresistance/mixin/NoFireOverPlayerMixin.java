@@ -1,5 +1,6 @@
 package com.qzimyion.betterfireresistance.mixin;
 
+import com.qzimyion.betterfireresistance.BFRConfig;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -38,7 +39,7 @@ public abstract class NoFireOverPlayerMixin {
     @Unique
     public void multiLoader_Template$extinguishFire() {
         if ((Entity)(Object) this instanceof LivingEntity) {
-            if (((Entity) (Object) this) instanceof Player && ((Player) (Object) this).isCreative()) {
+            if (BFRConfig.defaultFireOffInCreavite &&((Entity) (Object) this) instanceof Player && ((Player) (Object) this).isCreative()) {
                 this.remainingFireTicks = 0;
                 return;
             }
