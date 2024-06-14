@@ -3,9 +3,9 @@
   "package": "qzimyion.betterfireresistance.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-
+    "NoFireOnEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  }
 }
